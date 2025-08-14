@@ -1,5 +1,11 @@
 # vue-project
 
+From Codewithguillaume:
+
+▸ https://www.youtube.com/watch?v=0NB9lgFcOT4
+
+but updated to use Tailwind V4
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
