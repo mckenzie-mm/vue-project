@@ -2,7 +2,9 @@
 
 From Codewithguillaume:
 
-▸ https://www.youtube.com/watch?v=0NB9lgFcOT4
+Part 1: https://www.youtube.com/watch?v=0NB9lgFcOT4
+
+Part 2: https://www.youtube.com/watch?v=UP2mHUpcv6g
 
 but updated to use Tailwind V4
 
