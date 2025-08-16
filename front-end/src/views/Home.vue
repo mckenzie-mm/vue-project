@@ -1,18 +1,19 @@
 <script setup>
 
+import fetchWrapper from '@/functions/fetch-wrapper.js';
 import store from '../store.js'
 
 const getWordNumber = (str) => (str.split(' ').length)
 
 
-const data = async () => {
-    fetch('http://localhost:8080/blogs') // Basic GET request
-    .then(response => response.json()) // Parse response as JSON
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+const fetchPosts = async () => {
+
+    const { data: posts } = await fetchWrapper('http://localhost:8080/blogs');
+
+    store.posts = posts;
 }
 
-data();
+fetchPosts();
 
 </script>
 

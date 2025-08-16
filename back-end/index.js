@@ -32,7 +32,7 @@ const store = {
 
 // Respond to GET request on the /blogs route
 app.get('/blogs', (req, res) => {
-  res.send(store);
+  res.send({ data: store.posts });
 });
 
 // Respond to GET request on the /blogs route

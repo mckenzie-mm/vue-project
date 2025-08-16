@@ -22,6 +22,20 @@ https://www.w3schools.com/nodejs/nodejs_express.asp
 
 (* Note migrating to express v5 requires a named catch all route)
 
+### Project Setup
+
+```sh
+npm install
+```
+
+#### Start backend
+
+```sh
+npm run start
+```
+
+
+
 *******************************************************************************
 
 ## Front End
