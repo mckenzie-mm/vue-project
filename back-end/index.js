@@ -1,20 +1,44 @@
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
 const port = 8080;
 
-// Respond to GET request on the root route
-app.get('/', (req, res) => {
-  res.send('GET request to the homepage');
+app.use(cors());
+app.use(express.json());
+
+
+// store for dummy data
+const store = {
+    posts: [
+    {
+        id: 1,
+        title: 'Post',
+        description: 'This is my description 1',
+        date: new Date()
+    }, {
+        id: 2,
+        title: 'Post',
+        description: 'This is my description 2',
+        date: new Date()
+    }, {
+        id: 3,
+        title: 'Post',
+        description: 'This is my description 3',
+        date: new Date()
+    }
+]
+};
+
+// Respond to GET request on the /blogs route
+app.get('/blogs', (req, res) => {
+  res.send(store);
 });
 
-// Respond to POST request on the root route
-app.post('/', (req, res) => {
-  res.send('POST request to the homepage');
-});
-
-// Respond to GET request on the /about route
-app.get('/about', (req, res) => {
-  res.send('About page');
+// Respond to GET request on the /blogs route
+app.get('/blogs/:id', (req, res) => {
+  const post = store.posts.find(x => x.id === parseInt(req.params.id))
+  res.send(post);
 });
 
 // Catch all other routes
