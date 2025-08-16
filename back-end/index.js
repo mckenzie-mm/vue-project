@@ -38,7 +38,7 @@ app.get('/blogs', (req, res) => {
 // Respond to GET request on the /blogs route
 app.get('/blogs/:id', (req, res) => {
   const post = store.posts.find(x => x.id === parseInt(req.params.id))
-  res.send(post);
+  res.send({ data: post });
 });
 
 // Catch all other routes
